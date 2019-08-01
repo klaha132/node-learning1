@@ -12,6 +12,7 @@ const publicDirPath = path.join(__dirname,'../public');
 app.set('view engine', 'hbs'); //handlebar set up with express
 app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
+
 app.use(express.static(publicDirPath));
 
 app.get('/products', (req, res) => {
